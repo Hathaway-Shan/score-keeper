@@ -13,5 +13,15 @@ export default function createScoreKeeper(root) {
         } else {
             root.classList.remove('hidden');
         }
+
+        root.innerHTML = '';
+
+        const div = document.createElement('div');
+        div.classList.add('poll-box');
+
+        const span1 = document.createElement('span');
+        span1.classList.value = 'team-a';
+        span1.textContent = game.teamA.name;
+
     };
 }

@@ -5,7 +5,12 @@ const state = {};
 export function initialize() {
     // What is the initial shape of state?
     // For example:
-    state.game = {};
+    state.game = {
+
+        teamA: { name: 'team-a', score: 0 },
+        teamB: { name: 'team-a', score: 0 },
+
+    };
     // state.pastGames = [];
 }
 // call initialize
