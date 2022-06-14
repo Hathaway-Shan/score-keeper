@@ -8,7 +8,7 @@ export function initialize() {
     state.game = {
 
         teamA: { name: 'team-a', score: 0 },
-        teamB: { name: 'team-a', score: 0 },
+        teamB: { name: 'team-b', score: 0 },
 
     };
     // state.pastGames = [];
