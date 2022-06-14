@@ -6,13 +6,12 @@ export default function createScoreKeeper(root) {
     //should return it's component render function
     // return ({data}) => {
     return (props) => {
-        const game = props.data;
+        const game = props.game;
         if (!game) {
             root.classList.add('hidden');
-            return;
+            
+        } else {
+            root.classList.remove('hidden');
         }
-
-        root.classList.remove('hidden'); 
-
     };
 }

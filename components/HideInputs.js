@@ -1,4 +1,4 @@
-export default function createNewPoll(root) { 
+export default function createHideInputs(root) { 
     //reference DOM
 
     //event listeners
@@ -8,10 +8,10 @@ export default function createNewPoll(root) {
     return (props) => {
         const game = props.game;
         if (game) {
-            root.classList.remove('hidden');
+            root.classList.add('hidden');
             
         } else {
-            root.classList.add('hidden');
+            root.classList.remove('hidden');
         }
     };
 }
