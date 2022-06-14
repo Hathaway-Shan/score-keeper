@@ -1,4 +1,4 @@
-export default function createScoreboard(root) { 
+export default function createNewPoll(root) { 
     //reference DOM
 
     //event listeners
@@ -7,12 +7,12 @@ export default function createScoreboard(root) {
     // return ({data}) => {
     return (props) => {
         const game = props.data;
-        if (!game) {
+        if (game) {
             root.classList.add('hidden');
             return;
         }
 
-        root.classList.remove('hidden'); 
+        root.classList.remove('hidden');
 
     };
 }

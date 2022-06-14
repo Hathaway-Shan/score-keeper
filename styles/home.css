@@ -24,7 +24,7 @@ main  {
     width: 200px;
 }
 
-.poll-controls {
+#poll-controls {
     background-color: coral;
 }
 
@@ -50,3 +50,6 @@ button {
     
 }
 
+.hidden {
+    display: none;
+}

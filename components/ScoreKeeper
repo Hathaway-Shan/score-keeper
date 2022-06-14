@@ -1,4 +1,4 @@
-export default function createScoreboard(root) { 
+export default function createScoreKeeper(root) { 
     //reference DOM
 
     //event listeners
