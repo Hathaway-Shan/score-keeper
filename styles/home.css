@@ -1,1 +1,102 @@
 /* CSS for home page (index.html) */
+body {
+    background: url(/assets/sport-field.png) rgb(37, 162, 144) no-repeat center center fixed;
+}
+
+main  {
+    background: url(/assets/sport-field.png) rgb(37, 162, 144) no-repeat center center fixed;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 33% 34% 33%;
+    grid-template-areas:
+        "form-container main past-games past-games"
+        "scoreboard-container main past-game-display"
+        "game-controls main past-game-display"
+    ;
+    
+} 
+
+#form-container {
+    background-color: cornflowerblue;
+}
+
+#scoreboard-container {
+    background-color: coral;
+    /* float: left; */
+
+}
+
+#past-games {
+    background-color: aquamarine;
+    padding: 10px;
+    /* float: right; */
+    text-align: right;
+}
+
+.game-controls {
+    background-color: coral;
+}
+
+form {
+    display: grid;
+    gap: 5px;
+}
+
+
+
+/* @media (min-width: 500px) {
+    main {
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+        text-align: center;
+    }
+} */
+/*
+form {
+    padding: 45px;
+    background: wheat;
+    border: 1px solid rgb(100, 100, 59);
+    border-radius: 5px;
+
+    display: grid;
+    gap: 5px;
+    float:
+} */
+
+/* label, input, span {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+} */
+
+button {
+    max-width: 75px;
+    display: flex;
+    margin-bottom: 10PX;
+}
+
+/* .game-controls {
+    display: flexbox;
+    background-color: rgb(110, 57, 160);
+    padding: 25px;
+    outline: 2px;
+    outline-color: black;
+    clear: left;
+}
+
+#scoreboard-container {
+    background-color: burlywood;
+    padding: 25px;
+    
+} */
+
+.past-game-display {
+    background: wheat;
+    border: 1px solid black;
+    padding: 25px;
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    float: right;
+}
+
