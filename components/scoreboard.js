@@ -1,6 +1,6 @@
 export default function createScoreboard(root) { 
     //reference DOM
-
+    const [teamADisplay, teamBDisplay] = root.querySelectorAll('span');
     //event listeners
 
     //should return it's component render function
@@ -12,6 +12,11 @@ export default function createScoreboard(root) {
             
         } else {
             root.classList.remove('hidden');
+
+            teamADisplay.textContent = game.teamA.name;
+            teamBDisplay.textContent = game.teamB.name;
+            teamADisplay.textContent = game.teamA.score;
+            teamBDisplay.textContent = game.teamB.score;
         }
     };
 }

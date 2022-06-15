@@ -19,3 +19,10 @@ initialize();
 export default state;
 
 // export dispatch functions that modify state
+
+export function pollExport(teamA, teamB) {
+    state.game = {
+        teamA: {name: aName, score: 0 }
+        teamB: {name: bName, score: 0 }
+    }
+}
