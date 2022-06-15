@@ -6,7 +6,8 @@ import createNewPoll from './components/NewPoll.js';
 import createScoreKeeper from './components/ScoreKeeper.js';
 import createHideInputs from './components/HideInputs.js';
 // import state and dispatch functions
-import state, { pollExport } from './state.js';
+//pollExport goes in curly braces below
+import state, {} from './state.js';
 // Create each component: 
 // - pass in the root element via querySelector
 // - pass any needed handler functions as properties of an actions object 

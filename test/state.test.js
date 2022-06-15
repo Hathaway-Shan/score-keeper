@@ -1,7 +1,8 @@
 import state, {
-    initialize, pollExport,
-    // import dispatch functions
-    pollExport,
+    initialize, 
+    // pollExport,
+    // uncomment above and below import dispatch functions
+    // pollExport,
 } from '../state.js';
 // make sure state is at known starting point
 QUnit.module('state', { beforeEach: initialize });
