@@ -1,6 +1,7 @@
 export default function createNewPoll(root) { 
     //reference DOM
-    // const form = root.querySelector('form');
+    const form = root.querySelector('form');
+    const handleNewPoll = 
     
     //event listeners
 
