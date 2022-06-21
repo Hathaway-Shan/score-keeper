@@ -1,7 +1,11 @@
 export default function createNewPoll(root) { 
     //reference DOM
     const form = root.querySelector('form');
-    const handleNewPoll = 
+    form.addEventLister('submit'), (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        createNewPoll(formData.get('prompt'), formData.get('team-a'), formData.get('team-b'));
+    }; 
     
     //event listeners
 

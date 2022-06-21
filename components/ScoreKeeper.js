@@ -4,7 +4,6 @@ export default function createScoreKeeper(root) {
     //event listeners
 
     //should return it's component render function
-    // return ({data}) => {
     return (props) => {
         const game = props.game;
 
