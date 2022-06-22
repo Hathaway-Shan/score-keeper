@@ -23,6 +23,11 @@ const scoreA = document.querySelector('#score-a');
 const teamB = document.querySelector('#team-b');
 const scoreB = document.querySelector('#score-b');
 const endButton = document.querySelector('#end-poll');
+
+//container elements for hidden targeting based on game state
+const formContainer = document.querySelector('#form-container');
+const scoreBoard = document.querySelector('#scoreboard-container');
+
 //create poll function
 
 //set state for poll existing state
@@ -36,12 +41,15 @@ const endButton = document.querySelector('#end-poll');
 
 //write two display functions one for the no poll state and the poll state
 function displayNewPoll() {
-
+    formContainer.classList.remove('hidden');
+    scoreBoard.classList.add('hidden');
 }
 connectEventListeners();
 displayNewPoll();
 
 function displayVoting() {
+    formContainer.classList.add('hidden');
+    scoreBoard.classList.remove('hidden');
     displayScores();
 }
 
@@ -92,6 +100,8 @@ function displayScores() {
 }
 
 function displayPastScores() {
+    //fixes endgame button appending multiple times and breaking
+    pollPen.innerHTML = '';
     for (let pastGame of state.pastGames) {
         const pollBox = document.createElement('div');
         pollBox.classList.add('past-poll-display');
