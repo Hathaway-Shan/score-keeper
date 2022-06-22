@@ -1,46 +1,38 @@
-// import utilities
+// the state machine build pattern
 
-// import component creators
-import createScoreboard from './components/Scoreboard.js';
-import createNewPoll from './components/NewPoll.js';
-import createScoreKeeper from './components/ScoreKeeper.js';
-import createHideInputs from './components/HideInputs.js';
-// import state and dispatch functions
-//pollExport goes in curly braces below
-import state, { endGame, downVote, upVote, startGame } from './state.js';
-// Create each component: 
-// - pass in the root element via querySelector
-// - pass any needed handler functions as properties of an actions object 
-const HideInputs = createHideInputs(document.querySelector('#form-container'), {
-    handleNewPoll: (aName, bName) => {
-        HideInputs(aName, bName);
-        display();
-    }
-});
+//wire up event handlers this will need to be done for
+//interactive elements of functions filling out these elements
+//switches to poll exists and we have an active poll
 
-const NewPoll = createNewPoll(document.querySelector('#poll-controls'));
+//begin
+
+//set state for no poll state
+//points to a section id > points to the form inside the form element
+const newPollForm = document.querySelector('#form-container > form');
+//create poll function
+
+//set state for poll existing state
+
+//create vote and downvote function
+//increment voted item
+
+//create end poll function
+//save poll and switch to no poll state
 
 
-//Handler functions
-const Scoreboard = createScoreboard(document.querySelector('#scoreboard'));
-const ScoreKeeper = createScoreKeeper(document.querySelector('#scoreboard-container'), {
-    handleUpVote: (option) => {
-        upVote(option);
-        display();
-    }
-    handleDownVote: (option) => {
-        upVote(option);
-        display();
-    }
-}); 
-// Roll-up display function that renders (calls with state) each component
-function display() {
-    // Call each component passing in props that are the pieces of state this component needs 
-    HideInputs({ game: state.game });
-    Scoreboard({ game: state.game });
-    ScoreKeeper({ game: state.game });
-    NewPoll({ game: state.game });
-};
+//write two display functions one for the no poll state and the poll state
+function displayNewPoll() {
+    newPollForm.addEventListener('submit', (event) => {
+        //takes html element with form and returns a simplified structure of
+        //just the data we're interested in
+        const formData = new FormData(newPollForm);
+        console.log(formData.get('topicEntry'), formData.get('pollA'), formData.get('pollB'));
+        event.preventDefault();
+    });
+}
+displayNewPoll();
 
-// Call display on page load
-display();
+function displayVoting() {
+    console.log('display voting');
+}
+

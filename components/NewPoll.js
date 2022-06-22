@@ -7,7 +7,6 @@ export default function createNewPoll(root) {
         createNewPoll(formData.get('prompt'), formData.get('team-a'), formData.get('team-b'));
     }; 
     
-    //event listeners
 
     //should return it's component render function
     // return ({data}) => {
