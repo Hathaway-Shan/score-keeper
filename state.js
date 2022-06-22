@@ -14,14 +14,14 @@ initialize();
 export default state;
 
 // export dispatch functions that modify state
-export function startGame(prompt, aName, bName) {
+export function startPoll(prompt, aName, bName) {
     state.game = {
         prompt: prompt,
         teamA: { name: aName, score: 0 },
         teamB: { name: bName, score: 0 },
-        
+
     };
-    console.log(prompt);
+    console.log(state);
 }
 
 export function upVote(option) {

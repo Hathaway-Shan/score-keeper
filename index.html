@@ -19,7 +19,7 @@
     </header>
 
     <main>
-<!-- inputs for team names -->
+        <!-- inputs for team names -->
         <section id="form-container">
             <form>
                 <h2>New Poll</h2>
@@ -28,43 +28,41 @@
                     <input required name="topicEntry">
                 </label>
                 <label>
-                    For
-                    <input required name="pollA">
+                    For <input required name="pollA">
                 </label>
                 <label>
                     Against
                     <input required name="pollB">
                 </label>
-<!-- start poll controls -->
+                <!-- start poll controls -->
                 <label>
                     Start a new poll!
                     <button class="action">Start!</button>
                 </label>
             </form>
         </section>
-<!-- scoreboard display -->
-<section id="scoreboard">
-    <div class="poll-box">
-        <span class="team-a">The Pandas</span>
-        <span class="team-a">The Pandas</span>
-        <span class="score-a">5</span>
-        <span class="team-b">The Wombats</span>
-        <span class="score-b">2</span>
-    </div>
-</section>
-<!-- scoreboard controls and score display -->
+        <!-- scoreboard display -->
+        <section id="scoreboard">
+            <div id="poll-box">
+                <span id="team-a">The Pandas</span>
+                <span id="score-a">5</span>
+                <span id="team-b">The Wombats</span>
+                <span id="score-b">2</span>
+            </div>
+        </section>
+        <!-- scoreboard controls and score display -->
         <section id="scoreboard-container">
             <h2>Poll Controls</h2>
-            <div class="scoreboard-controls"></div>
-<!-- team A controls -->
-            <span class="poll-a-display">For</span>
-            <button class="increaseScoreA">+</button>
-            <button class="removeScoreA">-</button>
-<!-- team B controls -->
-            <span class="poll-b-display">Against</span>
-            <button class="increaseScoreB">+</button>
-            <button class="removeScoreB">-</button>
-<!-- end poll controls -->
+            <div id="scoreboard-controls"></div>
+            <!-- team A controls -->
+            <span id="poll-a-display">For</span>
+            <button id="increaseScoreA">+</button>
+            <button id="removeScoreA">-</button>
+            <!-- team B controls -->
+            <span id="poll-b-display">Against</span>
+            <button id="increaseScoreB">+</button>
+            <button id="removeScoreB">-</button>
+            <!-- end poll controls -->
             <div id="poll-controls">
                 <label>
                     End current poll
@@ -72,7 +70,7 @@
                 </label>
             </div>
         </section>
-<!-- past polls display -->
+        <!-- past polls display -->
         <section id="past-polls">
             <h2>Past Polls</h2>
             <div class="past-poll-display">
