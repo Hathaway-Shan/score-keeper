@@ -21,25 +21,7 @@ export function startPoll(prompt, aName, bName) {
         teamB: { name: bName, score: 0 },
 
     };
-    console.log(state);
-}
 
-export function upVote(option) {
-    if (option === '+') {
-        state.game.aName.score++;
-    }
-    if (option === '-') {
-        state.game.bName.score++;
-    }
-}
-
-export function downVote(option) {
-    if (option === '+') {
-        state.game.aName.score--;
-    }
-    if (option === '-') {
-        state.game.bName.score--;
-    }
 }
 
 export function endGame() {

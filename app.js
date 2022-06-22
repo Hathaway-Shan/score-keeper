@@ -1,9 +1,9 @@
 // the state machine build pattern
 //import needed functions from state
 import state from './state.js';
-import { startPoll } from './state.js';
+import { startPoll, endGame } from './state.js';
 
-
+const pollPen = document.querySelector('#past-polls');
 
 //wire up event handlers this will need to be done for
 //interactive elements of functions filling out these elements
@@ -22,6 +22,7 @@ const teamA = document.querySelector('#team-a');
 const scoreA = document.querySelector('#score-a');
 const teamB = document.querySelector('#team-b');
 const scoreB = document.querySelector('#score-b');
+const endButton = document.querySelector('#end-poll');
 //create poll function
 
 //set state for poll existing state
@@ -35,6 +36,17 @@ const scoreB = document.querySelector('#score-b');
 
 //write two display functions one for the no poll state and the poll state
 function displayNewPoll() {
+
+}
+connectEventListeners();
+displayNewPoll();
+
+function displayVoting() {
+    displayScores();
+}
+
+function connectEventListeners() {
+
     newPollForm.addEventListener('submit', (event) => {
         //takes html element with form and returns a simplified structure of
         //just the data we're interested in
@@ -43,10 +55,7 @@ function displayNewPoll() {
         event.preventDefault();
         displayVoting();
     });
-}
-displayNewPoll();
 
-function displayVoting() {
     pollControlsAPlus.addEventListener('click', (event) => {
         state.game.teamA.score++;
         event.preventDefault();
@@ -67,7 +76,12 @@ function displayVoting() {
         event.preventDefault();
         displayScores();
     });
+    endButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        endGame();
+        displayPastScores();
 
+    });
 }
 
 function displayScores() {
@@ -77,3 +91,38 @@ function displayScores() {
     teamB.textContent = state.game.teamB.name;
 }
 
+function displayPastScores() {
+    for (let pastGame of state.pastGames) {
+        const pollBox = document.createElement('div');
+        pollBox.classList.add('past-poll-display');
+        let promptSpan = document.createElement('span');
+        let nameASpan = document.createElement('span');
+        let scoreASpan = document.createElement('span');
+        let nameBSpan = document.createElement('span');
+        let scoreBSpan = document.createElement('span');
+
+        promptSpan.textContent = pastGame.prompt;
+        nameASpan.textContent = pastGame.teamA.name;
+        scoreASpan.textContent = pastGame.teamA.score;
+        nameBSpan.textContent = pastGame.teamB.name;
+        scoreBSpan.textContent = pastGame.teamB.score;
+        console.log(pastGame);
+
+        pollBox.append(promptSpan, nameASpan, scoreASpan, nameBSpan, scoreBSpan);
+        pollPen.append(pollBox);
+    }
+}
+
+// export default function createScoreKeeper(root) { 
+
+//     return (props) => {
+//         const game = props.game;
+
+//         if (!game) {
+//             root.classList.add('hidden');
+            
+//         } else {
+//             root.classList.remove('hidden');
+//         }
+
+//         root.innerHTML = '';

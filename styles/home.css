@@ -1,10 +1,10 @@
 /* CSS for home page (index.html) */
 
-main  {
+main {
     display: grid;
     background: url(/assets/poll-background.png);
     grid-auto-flow: dense;
-} 
+}
 
 #form-container {
     background-color: cornflowerblue;
@@ -46,8 +46,8 @@ button {
     display: grid;
     gap: 10px;
     justify-items: center;
-    float: left;
-    
+
+
 }
 
 .poll-box {
@@ -57,7 +57,7 @@ button {
     width: 200px;
 
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         'team-a team-b'
         'score-a score-b'
     ;
