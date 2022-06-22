@@ -88,7 +88,7 @@ function connectEventListeners() {
         event.preventDefault();
         endGame();
         displayPastScores();
-
+        displayNewPoll();
     });
 }
 

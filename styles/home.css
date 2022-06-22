@@ -8,7 +8,6 @@ main {
 
 #form-container {
     background-color: cornflowerblue;
-    display: grid;
     grid-template-columns: 30px 30px 30px 30px;
     width: 200px;
 }
@@ -48,6 +47,21 @@ button {
     justify-items: center;
 
 
+}
+
+#current-poll-box {
+    background: rgb(230, 233, 78);
+    border: 1px solid black;
+    padding: 10px 5px;
+    width: 200px;
+
+    display: grid;
+    grid-template-areas:
+        'team-a team-b'
+        'score-a score-b'
+    ;
+    gap: 10px;
+    justify-items: center;
 }
 
 .poll-box {
