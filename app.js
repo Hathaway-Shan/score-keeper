@@ -116,23 +116,8 @@ function displayPastScores() {
         scoreASpan.textContent = pastGame.teamA.score;
         nameBSpan.textContent = pastGame.teamB.name;
         scoreBSpan.textContent = pastGame.teamB.score;
-        console.log(pastGame);
 
         pollBox.append(promptSpan, nameASpan, scoreASpan, nameBSpan, scoreBSpan);
         pollPen.append(pollBox);
     }
 }
-
-// export default function createScoreKeeper(root) { 
-
-//     return (props) => {
-//         const game = props.game;
-
-//         if (!game) {
-//             root.classList.add('hidden');
-            
-//         } else {
-//             root.classList.remove('hidden');
-//         }
-
-//         root.innerHTML = '';
