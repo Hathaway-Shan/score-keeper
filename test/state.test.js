@@ -1,5 +1,6 @@
 import state, {
-    initialize, 
+    initialize,
+    startPoll,
     // pollExport,
     // uncomment above and below import dispatch functions
     // pollExport,
@@ -9,14 +10,17 @@ QUnit.module('state', { beforeEach: initialize });
 
 const test = QUnit.test;
 
-test('new poll creates poll', (expect) => {
-    // what is the initial expected state?
-    expect.equal(state.game, null);
+test('start poll creates poll', (expect) => {
     // use the action
-
+    startPoll('wizards', 'for', 'against');
     // what should the state be now?
-
-
-    // remove this line when starting your test
-    expect.deepEqual(state, {});
+    expect.deepEqual(state.game, {
+        prompt: 'wizards',
+        teamA: { name: 'for', score: 0 },
+        teamB: { name: 'against', score: 0 },
+    });
 });
+
+test('score buttons increment score state', (expect) => {
+
+})
