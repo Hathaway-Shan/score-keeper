@@ -15,10 +15,73 @@
 <body>
     <header>
         <img src="assets/html_css_js.png">
-        <h1>Web MVC UI</h1>
+        <h1>WeScore Tracker</h1>
     </header>
 
-    <main></main>
+    <main>
+        <!-- inputs for team names -->
+        <section id="form-container">
+            <form>
+                <h2>New Poll</h2>
+                <label>
+                    Your Poll Topic
+                    <input required name="topicEntry">
+                </label>
+                <label>
+                    For <input required name="pollA">
+                </label>
+                <label>
+                    Against
+                    <input required name="pollB">
+                </label>
+                <!-- start poll controls -->
+                <label>
+                    Start a new poll!
+                    <button class="action">Start!</button>
+                </label>
+            </form>
+        </section>
+        <!-- scoreboard display -->
+        <section id="scoreboard">
+            <div id="current-poll-box">
+                <span id="team-a">The Pandas</span>
+                <span id="score-a">5</span>
+                <span id="team-b">The Wombats</span>
+                <span id="score-b">2</span>
+            </div>
+        </section>
+        <!-- scoreboard controls and score display -->
+        <section id="scoreboard-container">
+            <h2>Poll Controls</h2>
+            <div id="scoreboard-controls"></div>
+            <!-- team A controls -->
+            <span id="poll-a-display">For</span>
+            <button id="increaseScoreA">+</button>
+            <button id="removeScoreA">-</button>
+            <!-- team B controls -->
+            <span id="poll-b-display">Against</span>
+            <button id="increaseScoreB">+</button>
+            <button id="removeScoreB">-</button>
+            <!-- end poll controls -->
+            <div id="poll-controls">
+                <label>
+                    End current poll
+                    <button id="end-poll">End</button>
+                </label>
+            </div>
+        </section>
+        <!-- past polls display -->
+        <section id="past-polls">
+            <h2>Past Polls</h2>
+            <div class="past-poll-display">
+                <div class="past-score-display"></div>
+                <span class="team-a">The Pandas</span>
+                <span class="score-a">5</span>
+                <span class="team-b">The Wombats</span>
+                <span class="score-b">2</span>
+            </div>
+        </section>
+    </main>
 
     <footer>&copy;2021 Aspiring Software Developer</footer>
 

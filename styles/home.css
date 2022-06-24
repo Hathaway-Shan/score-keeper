@@ -1,1 +1,84 @@
 /* CSS for home page (index.html) */
+
+main {
+    display: grid;
+    background: url(/assets/poll-background.png);
+    grid-auto-flow: dense;
+}
+
+#form-container {
+    background-color: cornflowerblue;
+    grid-template-columns: 30px 30px 30px 30px;
+    width: 200px;
+}
+
+#scoreboard-container {
+    background-color: coral;
+    width: 200px;
+}
+
+#past-polls {
+    background-color: aquamarine;
+    padding: 10px;
+    width: 200px;
+}
+
+#poll-controls {
+    background-color: coral;
+}
+
+form {
+    display: grid;
+    gap: 5px;
+}
+
+button {
+    max-width: 75px;
+    display: flex;
+    margin-bottom: 10PX;
+}
+
+.past-poll-display {
+    background: wheat;
+    border: 1px solid black;
+    padding: 25px;
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+
+
+}
+
+#current-poll-box {
+    background: rgb(230, 233, 78);
+    border: 1px solid black;
+    padding: 10px 5px;
+    width: 200px;
+
+    display: grid;
+    grid-template-areas:
+        'team-a team-b'
+        'score-a score-b'
+    ;
+    gap: 10px;
+    justify-items: center;
+}
+
+.poll-box {
+    background: rgb(230, 233, 78);
+    border: 1px solid black;
+    padding: 10px 5px;
+    width: 200px;
+
+    display: grid;
+    grid-template-areas:
+        'team-a team-b'
+        'score-a score-b'
+    ;
+    gap: 10px;
+    justify-items: center;
+}
+
+.hidden {
+    display: none;
+}
